@@ -1,0 +1,19 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <header
+        android:fragment="pt.sotubo.clockit.UserRecordFragment"
+        android:icon="@mipmap/user"
+        android:title="@string/pref_title_users" />
+
+    <header
+        android:fragment="pt.sotubo.clockit.TSNEFragment"
+        android:icon="@mipmap/diagnostic"
+        android:title="@string/diagnostic" />
+
+    <header
+        android:fragment="pt.sotubo.clockit.SettingsActivity$DataSyncPreferenceFragment"
+        android:icon="@mipmap/settings"
+        android:title="@string/pref_header_data_sync" />
+
+</preference-headers>

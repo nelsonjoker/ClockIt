@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:keyboard="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/frgDaceDetector"
+            android:name="pt.sotubo.clockit.FaceDetectorFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imageViewUSB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            keyboard:srcCompat="@drawable/ic_action_usb" />
+    </FrameLayout>
+
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/ic_logo"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/previewPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:id="@+id/imageViewRxFrame"
+                    android:layout_width="200px"
+                    android:layout_height="150px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/common_google_signin_btn_text_light_focused"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewCode"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="40sp" />
+
+        <com.davidmiguel.numberkeyboard.NumberKeyboard
+            android:id="@+id/numberKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            keyboard:keyboardType="custom"
+            keyboard:leftAuxBtnBackground="@drawable/key_bg"
+            keyboard:leftAuxBtnIcon="@mipmap/ic_accept"
+            keyboard:rightAuxBtnIcon="@drawable/ic_backspace" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

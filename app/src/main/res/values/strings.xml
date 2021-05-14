@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">Clockit</string>
+    <string name="permission_camera_rationale">É necessária permissão para acesso à câmara</string>
+    <string name="no_camera_permission">Sem permissão para utilizar a câmara</string>
+    <string name="id_failed">Não foi possível validar a identidade</string>
+    <string name="title_activity_login">Indentificação</string>
+    <string name="title_clock_entry">Registo de ponto</string>
+
+    <string name="txt_enter">Registo de entrada realizado com sucesso</string>
+    <string name="txt_leave">Registo de saída realizado com sucesso</string>
+    <string name="txt_error">Ocorreu um erro</string>
+    <string name="txt_error_creating_entry">Não foi possível fazer o registo, tente mais tarde...</string>
+    <string name="txt_bad_user_code">Código de utilizador inválido</string>
+
+    <string name="txt_title_confirmation_required">Confirmação necessária</string>
+    <string name="txt_msg_overwrite_images">
+        Será recolhido um conjunto de imagens utilizadas no reconhecimento do utilizador...
+        Os registos anteriores serão sobreescritos.
+        As imagens recolhidas não serão guardadas
+    </string>
+
+    <string name="txt_training">A registar o novo utilizador...</string>
+
+    <string name="ws_default_host">http://192.168.0.10:8089</string>
+    <string name="ws_default_username">wsuser</string>
+    <string name="ws_default_password">wsbodet</string>
+
+    <string name="open_face_default_server">wss://faceid.sotubo.pt:9000</string>
+    <string name="admin_default_password">123456</string>
+
+    <string name="txt_mode_normal">normal</string>
+    <string name="txt_mode_advanced">avançado</string>
+
+    <string name="btn_clock">ponto</string>
+    <string name="btn_admin">administração</string>
+    <string name="title_advanced_mode_dialog">Último registo de ponto</string>
+
+
+    <string name="title_password">password</string>
+    <string name="txt_password_prompt">introduza a password de acesso</string>
+    <string name="txt_password_error">password inválida</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">Administração</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Dados remotos</string>
+
+    <string name="pref_title_ws_host">Servidor de webservices do relógio de ponto</string>
+    <string name="pref_title_ws_username">utilizador</string>
+    <string name="pref_title_ws_password">password</string>
+
+    <string name="pref_title_faceid_host">Servidor de reconhecimento facial</string>
+
+    <string name="pref_title_admin_password">Password de acesso</string>
+    <string name="pref_title_threshold_f">Limiar de decisão (%d %%)</string>
+
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="users">Utilizadores</string>
+    <string name="pref_title_users">Registo de utilizadores</string>
+    <string name="tsne">TSNE</string>
+    <string name="diagnostic">diagnóstico</string>
+    <string name="entrada">ENTRADA</string>
+    <string name="saida">SAÍDA</string>
+
+</resources>

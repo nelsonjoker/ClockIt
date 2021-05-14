@@ -1,0 +1,64 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Webservices Kelio">
+
+        <EditTextPreference
+            android:defaultValue="@string/ws_default_host"
+            android:inputType="textUri"
+            android:key="ws_host"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_ws_host" />
+        <EditTextPreference
+            android:defaultValue="@string/ws_default_username"
+            android:inputType="text"
+            android:key="ws_username"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_ws_username" />
+        <EditTextPreference
+            android:defaultValue="@string/ws_default_password"
+            android:inputType="textPassword"
+            android:key="ws_password"
+            android:maxLines="1"
+            android:password="true"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_ws_password" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Reconhecimento facial">
+
+        <EditTextPreference
+            android:defaultValue="@string/open_face_default_server"
+            android:inputType="textUri"
+            android:key="open_face_server"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_faceid_host" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Administração">
+
+        <EditTextPreference
+            android:defaultValue="@string/admin_default_password"
+            android:key="password"
+            android:password="true"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_admin_password" />
+
+        <SeekBarPreference
+            android:key="threshold"
+            android:title="@string/pref_title_threshold_f"
+            android:defaultValue="30"
+            android:max="100"
+            android:min="0" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

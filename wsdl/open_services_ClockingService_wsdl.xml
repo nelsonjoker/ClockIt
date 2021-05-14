@@ -1,0 +1,385 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://echange.service.open.bodet.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ClockingService" targetNamespace="http://echange.service.open.bodet.com">
+<wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://lang.java" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://lang.java">
+<xsd:complexType name="Throwable">
+<xsd:sequence/>
+</xsd:complexType>
+<xsd:complexType name="Exception">
+<xsd:complexContent>
+<xsd:extension base="tns:Throwable">
+<xsd:sequence/>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://echange.service.open.bodet.com" xmlns:ns0="http://lang.java" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://echange.service.open.bodet.com">
+<xsd:complexType name="Clocking">
+<xsd:complexContent>
+<xsd:extension base="tns:EmployeeInformation">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="date" nillable="true" type="xsd:date"/>
+<xsd:element minOccurs="0" name="geolocationStatus" nillable="true" type="xsd:short"/>
+<xsd:element minOccurs="0" name="geolocationPrecision" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="clockingTypeIndicator" nillable="true" type="xsd:short"/>
+<xsd:element minOccurs="0" name="time" nillable="true" type="xsd:time"/>
+<xsd:element minOccurs="0" name="clockingKey" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="automatic" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="readerKey" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="timePosition" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="obtainingMode" nillable="true" type="xsd:short"/>
+<xsd:element minOccurs="0" name="longitude" nillable="true" type="xsd:float"/>
+<xsd:element minOccurs="0" name="latitude" nillable="true" type="xsd:float"/>
+<xsd:element minOccurs="0" name="inOutIndicator" nillable="true" type="xsd:short"/>
+<xsd:element minOccurs="0" name="absenceTypeKey" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="absenceTypeAbbreviation" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="readerDescription" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="absenceTypeDescription" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="terminalKey" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="terminalDescription" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="overtimeTypeDescription" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="overtimeTypeAbbreviation" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="overtimeTypeKey" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:complexType name="EmployeeInformation">
+<xsd:complexContent>
+<xsd:extension base="tns:Object">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="employeeKey" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="employeeSurname" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="employeeFirstName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="employeeIdentificationCode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="employeeBadgeCode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="employeeIdentificationNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="archivedEmployee" nillable="true" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:complexType abstract="true" name="Object">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="technicalString" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfClocking">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="Clocking" nillable="true" type="tns:Clocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="AskedPopulationWithPeriod">
+<xsd:complexContent>
+<xsd:extension base="tns:AskedPopulation">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="endDate" nillable="true" type="xsd:date"/>
+<xsd:element minOccurs="0" name="startDate" nillable="true" type="xsd:date"/>
+<xsd:element minOccurs="0" name="dateMode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="endOffset" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="startOffset" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:complexType name="AskedPopulation">
+<xsd:complexContent>
+<xsd:extension base="tns:EmployeeInformation">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="groupFilter" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="populationMode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="populationFilter" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="populationEndDate" nillable="true" type="xsd:date"/>
+<xsd:element minOccurs="0" name="populationStartDate" nillable="true" type="xsd:date"/>
+</xsd:sequence>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfAskedPopulationWithPeriod">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="AskedPopulationWithPeriod" nillable="true" type="tns:AskedPopulationWithPeriod"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="askedEmployee">
+<xsd:complexContent>
+<xsd:extension base="tns:EmployeeInformation">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="endDate" nillable="true" type="xsd:date"/>
+<xsd:element minOccurs="0" name="startDate" nillable="true" type="xsd:date"/>
+<xsd:element minOccurs="0" name="dateMode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="endOffset" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="startOffset" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfAskedEmployee">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="askedEmployee" nillable="true" type="tns:askedEmployee"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportCalculatedClockingsOnly" type="tns:exportCalculatedClockingsOnly"/>
+<xsd:complexType name="exportCalculatedClockingsOnly">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="employeeList" type="tns:ArrayOfAskedPopulationWithPeriod"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportCalculatedClockingsOnlyResponse" type="tns:exportCalculatedClockingsOnlyResponse"/>
+<xsd:complexType name="exportCalculatedClockingsOnlyResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="exportedClockings" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportClockingsByDateForEmployeeList" type="tns:exportClockingsByDateForEmployeeList"/>
+<xsd:complexType name="exportClockingsByDateForEmployeeList">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="employeeList" type="tns:ArrayOfAskedEmployee"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportClockingsByDateForEmployeeListResponse" type="tns:exportClockingsByDateForEmployeeListResponse"/>
+<xsd:complexType name="exportClockingsByDateForEmployeeListResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="exportedClockings" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportClockingsByDate" type="tns:exportClockingsByDate"/>
+<xsd:complexType name="exportClockingsByDate">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="populationFilter" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="groupFilter" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="startDate" nillable="true" type="xsd:date"/>
+<xsd:element minOccurs="0" name="endDate" nillable="true" type="xsd:date"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportClockingsByDateResponse" type="tns:exportClockingsByDateResponse"/>
+<xsd:complexType name="exportClockingsByDateResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="exportedClockings" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportClockings" type="tns:exportClockings"/>
+<xsd:complexType name="exportClockings">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="employeeList" type="tns:ArrayOfAskedPopulationWithPeriod"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="exportClockingsResponse" type="tns:exportClockingsResponse"/>
+<xsd:complexType name="exportClockingsResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="exportedClockings" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="importClockings" type="tns:importClockings"/>
+<xsd:complexType name="importClockings">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clockingsToImport" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="importClockingsResponse" type="tns:importClockingsResponse"/>
+<xsd:complexType name="importClockingsResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clockingsInError" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="importPhysicalClockings" type="tns:importPhysicalClockings"/>
+<xsd:complexType name="importPhysicalClockings">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clockingsToImport" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="importPhysicalClockingsResponse" type="tns:importPhysicalClockingsResponse"/>
+<xsd:complexType name="importPhysicalClockingsResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clockingsInError" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="deletePhysicalClockings" type="tns:deletePhysicalClockings"/>
+<xsd:complexType name="deletePhysicalClockings">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clockingsToDelete" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="deletePhysicalClockingsResponse" type="tns:deletePhysicalClockingsResponse"/>
+<xsd:complexType name="deletePhysicalClockingsResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clockingsInError" type="tns:ArrayOfClocking"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="Exception" nillable="true" type="ns0:Exception"/>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="Exception">
+<wsdl:part element="tns:Exception" name="Exception"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportCalculatedClockingsOnly">
+<wsdl:part element="tns:exportCalculatedClockingsOnly" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportCalculatedClockingsOnlyResponse">
+<wsdl:part element="tns:exportCalculatedClockingsOnlyResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportClockingsByDateForEmployeeList">
+<wsdl:part element="tns:exportClockingsByDateForEmployeeList" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportClockingsByDateForEmployeeListResponse">
+<wsdl:part element="tns:exportClockingsByDateForEmployeeListResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportClockingsByDate">
+<wsdl:part element="tns:exportClockingsByDate" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportClockingsByDateResponse">
+<wsdl:part element="tns:exportClockingsByDateResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportClockings">
+<wsdl:part element="tns:exportClockings" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="exportClockingsResponse">
+<wsdl:part element="tns:exportClockingsResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="importClockings">
+<wsdl:part element="tns:importClockings" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="importClockingsResponse">
+<wsdl:part element="tns:importClockingsResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="importPhysicalClockings">
+<wsdl:part element="tns:importPhysicalClockings" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="importPhysicalClockingsResponse">
+<wsdl:part element="tns:importPhysicalClockingsResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="deletePhysicalClockings">
+<wsdl:part element="tns:deletePhysicalClockings" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="deletePhysicalClockingsResponse">
+<wsdl:part element="tns:deletePhysicalClockingsResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:portType name="ClockingServicePortType">
+<wsdl:operation name="exportCalculatedClockingsOnly">
+<wsdl:input message="tns:exportCalculatedClockingsOnly" name="exportCalculatedClockingsOnly"></wsdl:input>
+<wsdl:output message="tns:exportCalculatedClockingsOnlyResponse" name="exportCalculatedClockingsOnlyResponse"></wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="exportClockingsByDateForEmployeeList">
+<wsdl:input message="tns:exportClockingsByDateForEmployeeList" name="exportClockingsByDateForEmployeeList"></wsdl:input>
+<wsdl:output message="tns:exportClockingsByDateForEmployeeListResponse" name="exportClockingsByDateForEmployeeListResponse"></wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="exportClockingsByDate">
+<wsdl:input message="tns:exportClockingsByDate" name="exportClockingsByDate"></wsdl:input>
+<wsdl:output message="tns:exportClockingsByDateResponse" name="exportClockingsByDateResponse"></wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="exportClockings">
+<wsdl:input message="tns:exportClockings" name="exportClockings"></wsdl:input>
+<wsdl:output message="tns:exportClockingsResponse" name="exportClockingsResponse"></wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="importClockings">
+<wsdl:input message="tns:importClockings" name="importClockings"></wsdl:input>
+<wsdl:output message="tns:importClockingsResponse" name="importClockingsResponse"></wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="importPhysicalClockings">
+<wsdl:input message="tns:importPhysicalClockings" name="importPhysicalClockings"></wsdl:input>
+<wsdl:output message="tns:importPhysicalClockingsResponse" name="importPhysicalClockingsResponse"></wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="deletePhysicalClockings">
+<wsdl:input message="tns:deletePhysicalClockings" name="deletePhysicalClockings"></wsdl:input>
+<wsdl:output message="tns:deletePhysicalClockingsResponse" name="deletePhysicalClockingsResponse"></wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="ClockingServiceSoapBinding" type="tns:ClockingServicePortType">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="exportCalculatedClockingsOnly">
+<soap:operation soapAction="urn:exportCalculatedClockingsOnly" style="document"/>
+<wsdl:input name="exportCalculatedClockingsOnly">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="exportCalculatedClockingsOnlyResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="exportClockingsByDateForEmployeeList">
+<soap:operation soapAction="urn:exportClockingsByDateForEmployeeList" style="document"/>
+<wsdl:input name="exportClockingsByDateForEmployeeList">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="exportClockingsByDateForEmployeeListResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="exportClockingsByDate">
+<soap:operation soapAction="urn:exportClockingsByDate" style="document"/>
+<wsdl:input name="exportClockingsByDate">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="exportClockingsByDateResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="exportClockings">
+<soap:operation soapAction="urn:exportClockings" style="document"/>
+<wsdl:input name="exportClockings">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="exportClockingsResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="importClockings">
+<soap:operation soapAction="urn:importClockings" style="document"/>
+<wsdl:input name="importClockings">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="importClockingsResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="importPhysicalClockings">
+<soap:operation soapAction="urn:importPhysicalClockings" style="document"/>
+<wsdl:input name="importPhysicalClockings">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="importPhysicalClockingsResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="deletePhysicalClockings">
+<soap:operation soapAction="urn:deletePhysicalClockings" style="document"/>
+<wsdl:input name="deletePhysicalClockings">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="deletePhysicalClockingsResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="ClockingService">
+<wsdl:port binding="tns:ClockingServiceSoapBinding" name="ClockingServiceHttpPort">
+<soap:address location="http://192.168.0.18:8089/open/services/ClockingService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
