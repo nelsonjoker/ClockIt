@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import android.Manifest;
 import android.app.Activity;
@@ -9,15 +9,11 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.YuvImage;
 import android.graphics.drawable.BitmapDrawable;
 import android.hardware.Camera;
-import android.media.FaceDetector;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -43,7 +39,6 @@ import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 import com.google.android.gms.vision.face.Face;
-import com.google.android.gms.vision.face.Landmark;
 import com.google.zxing.Result;
 
 import java.io.ByteArrayOutputStream;
@@ -52,7 +47,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
-import pt.sotubo.clockit.pt.sotubo.clockit.face.OpenFaceClient;
+import com.joker.clockit.face.OpenFaceClient;
 
 
 /**

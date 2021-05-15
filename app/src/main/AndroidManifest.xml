@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pt.sotubo.clockit">
+    package="com.joker.clockit">
     <uses-feature android:name="android.hardware.usb.host" />
 
 
@@ -25,7 +25,7 @@
 
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name="pt.sotubo.com.jokerapps.clockit.MainActivity">
             <intent-filter>
                 <!--<category android:name="android.intent.category.HOME" />-->
                 <category android:name="android.intent.category.DEFAULT" />
@@ -40,19 +40,19 @@
 
         </activity>
 
-        <activity android:name=".ClockEntryActivity"
-            android:parentActivityName=".MainActivity">
+        <activity android:name="pt.sotubo.com.jokerapps.clockit.ClockEntryActivity"
+            android:parentActivityName="pt.sotubo.com.jokerapps.clockit.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="pt.sotubo.clockit.MainActivity" />
+                android:value="pt.sotubo.com.jokerapps.clockit.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name="pt.sotubo.com.jokerapps.clockit.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="pt.sotubo.com.jokerapps.clockit.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="pt.sotubo.clockit.MainActivity" />
+                android:value="pt.sotubo.com.jokerapps.clockit.MainActivity" />
         </activity>
 
         <!--<receiver android:name="com.medavox.library.mutime.TimeDataPreserver" >

@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import org.junit.Test;
 

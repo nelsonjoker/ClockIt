@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import android.annotation.TargetApi;
 import android.content.Context;

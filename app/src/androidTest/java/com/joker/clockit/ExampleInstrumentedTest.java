@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("pt.sotubo.clockit", appContext.getPackageName());
+        assertEquals("pt.sotubo.com.jokerapps.com.android.clockit", appContext.getPackageName());
     }
 }

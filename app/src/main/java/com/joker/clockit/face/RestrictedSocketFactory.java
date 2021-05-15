@@ -1,4 +1,4 @@
-package pt.sotubo.clockit.pt.sotubo.clockit.face;
+package com.joker.clockit.face;
 
 import android.util.Log;
 

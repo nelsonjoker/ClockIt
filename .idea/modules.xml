@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Clockit.iml" filepath="$PROJECT_DIR$/Clockit.iml" group="Clockit" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Clockit/app" />
-      <module fileurl="file://$PROJECT_DIR$/mutime/mutime.iml" filepath="$PROJECT_DIR$/mutime/mutime.iml" group="Clockit/mutime" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ClockIt.iml" filepath="$PROJECT_DIR$/.idea/modules/ClockIt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ClockIt.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ClockIt.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mutime/ClockIt.mutime.iml" filepath="$PROJECT_DIR$/.idea/modules/mutime/ClockIt.mutime.iml" />
     </modules>
   </component>
 </project>

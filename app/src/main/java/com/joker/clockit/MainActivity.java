@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 
 import android.content.Context;
@@ -12,7 +12,6 @@ import android.hardware.SensorManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AlertDialog;
@@ -31,16 +30,9 @@ import com.davidmiguel.numberkeyboard.NumberKeyboard;
 import com.davidmiguel.numberkeyboard.NumberKeyboardListener;
 import com.medavox.library.mutime.MissingTimeDataException;
 import com.medavox.library.mutime.MuTime;
-import com.medavox.library.mutime.Ntp;
 import com.medavox.library.mutime.TimeDataPreserver;
 
 
-import java.sql.Timestamp;
-import java.time.Clock;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TimeZone;

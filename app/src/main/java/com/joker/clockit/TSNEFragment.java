@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,7 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import pt.sotubo.clockit.pt.sotubo.clockit.face.OpenFaceClient;
+import com.joker.clockit.face.OpenFaceClient;
 
 
 public class TSNEFragment extends PreferenceFragment implements OpenFaceClient.OnTSNEReceivedCallback {

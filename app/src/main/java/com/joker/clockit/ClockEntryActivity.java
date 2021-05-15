@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -35,8 +35,6 @@ import com.medavox.library.mutime.MuTime;
 import org.ksoap2.HeaderProperty;
 
 import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;

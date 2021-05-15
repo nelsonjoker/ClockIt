@@ -8,16 +8,16 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true">
 
-    <pt.sotubo.clockit.ui.CameraSourcePreview
+    <com.joker.clockit.ui.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <pt.sotubo.clockit.ui.GraphicOverlay
+        <com.joker.clockit.ui.GraphicOverlay
             android:id="@+id/faceOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </pt.sotubo.clockit.ui.CameraSourcePreview>
+    </com.joker.clockit.ui.CameraSourcePreview>
 
 </LinearLayout>

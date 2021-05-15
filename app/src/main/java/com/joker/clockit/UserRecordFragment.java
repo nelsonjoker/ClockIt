@@ -1,4 +1,4 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -39,7 +39,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
-import pt.sotubo.clockit.pt.sotubo.clockit.face.OpenFaceClient;
+import com.joker.clockit.face.OpenFaceClient;
 
 
 public class UserRecordFragment extends PreferenceFragment implements Camera.PreviewCallback, NumberKeyboardListener {

@@ -1,16 +1,14 @@
-package pt.sotubo.clockit;
+package com.joker.clockit;
 
 import java.io.IOException;
 import java.util.List;
 
 import android.app.Activity;
 import android.content.res.Configuration;
-import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
 import android.os.Build;
 import android.util.Log;
-import android.view.Display;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;

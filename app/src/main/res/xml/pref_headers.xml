@@ -2,17 +2,17 @@
 
 
     <header
-        android:fragment="pt.sotubo.clockit.UserRecordFragment"
+        android:fragment="com.joker.clockit.UserRecordFragment"
         android:icon="@mipmap/user"
         android:title="@string/pref_title_users" />
 
     <header
-        android:fragment="pt.sotubo.clockit.TSNEFragment"
+        android:fragment="com.joker.clockit.TSNEFragment"
         android:icon="@mipmap/diagnostic"
         android:title="@string/diagnostic" />
 
     <header
-        android:fragment="pt.sotubo.clockit.SettingsActivity$DataSyncPreferenceFragment"
+        android:fragment="com.joker.clockit.SettingsActivity$DataSyncPreferenceFragment"
         android:icon="@mipmap/settings"
         android:title="@string/pref_header_data_sync" />
 

@@ -20,7 +20,7 @@
 
         <fragment
             android:id="@+id/frgDaceDetector"
-            android:name="pt.sotubo.clockit.FaceDetectorFragment"
+            android:name="com.joker.clockit.FaceDetectorFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
