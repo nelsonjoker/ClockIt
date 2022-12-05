@@ -22,10 +22,10 @@
     <string name="txt_training">A registar o novo utilizador...</string>
 
     <string name="ws_default_host">http://192.168.0.10:8089</string>
-    <string name="ws_default_username">wsuser</string>
-    <string name="ws_default_password">wsbodet</string>
+    <string name="ws_default_username">get_username_from_provider</string>
+    <string name="ws_default_password">get_password_from_provider</string>
 
-    <string name="open_face_default_server">wss://faceid.sotubo.pt:9000</string>
+    <string name="open_face_default_server">wss://your.server.com:9000</string>
     <string name="admin_default_password">123456</string>
 
     <string name="txt_mode_normal">normal</string>
